@@ -48,4 +48,6 @@ What item was ordered most often? Grossed the most money?
 
 What user spent the most?
 
+`SELECT sum(price * quantity) total, orders.user_id FROM orders join items on orders.item_id = items.id group by user_id order by total desc limit 1;`
+
 What were the top 3 highest grossing categories?
