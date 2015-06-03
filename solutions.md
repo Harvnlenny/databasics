@@ -51,3 +51,5 @@ What user spent the most?
 `SELECT sum(price * quantity) total, orders.user_id FROM orders join items on orders.item_id = items.id group by user_id order by total desc limit 1;`
 
 What were the top 3 highest grossing categories?
+
+`SELECT sum(price * quantity) total, items.category FROM items join orders on items.id = orders.item_id group by category order by total desc limit 3;`
