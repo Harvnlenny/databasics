@@ -31,7 +31,16 @@ How many total items did we sell?
 
 How much was spent on books?
 
+`SELECT SUM(price) FROM items WHERE category LIKE "%Books%"`
+
 Simulate buying an item by inserting a User for yourself and an Order for that User.
+
+`INSERT INTO USERS (first_name, last_name, email)`
+`VALUES ('Aaron', 'Harvey', 'harvnlenny@gmail.com');`
+`INSERT INTO addresses (user_id, street, city, state, zip)`
+`VALUES (51, '1507 Main St', 'Valrico', 'FL', 33594);`
+`INSERT INTO orders (user_id, item_id, quantity)`
+`VALUES (51, 80, 4);`
 
 What item was ordered most often? Grossed the most money?
 
